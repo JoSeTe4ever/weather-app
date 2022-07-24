@@ -2,8 +2,8 @@ import "./App.css";
 import Search from "./components/Search";
 
 function App() {
-  const handleOnSearchChange = (data) => {
-    console.log("data", data);
+  const handleOnSearchChange = (cityName) => {
+    console.log(cityName);
   };
   return (
     <div className="container">

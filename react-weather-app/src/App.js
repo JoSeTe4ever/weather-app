@@ -3,13 +3,17 @@ import CurrentWeather from "./components/current-weather/currentWeather";
 import Search from "./components/search/search";
 
 function App() {
-  const handleOnSearchChange = (cityName) => {
-    console.log(cityName);
+
+  const selectedCity = {}; // a ver esto si también hace falta ponerlo en estado
+
+  const handleOnSearchChange = (selectedCity) => {
+    console.log("selectedCity" , selectedCity);
+    const [latitude, longitude] = selectedCity.value.split(" ");
   };
   return (
     <div className="container">
       <Search onSearchChange={handleOnSearchChange}></Search>
-      <CurrentWeather></CurrentWeather>
+      <CurrentWeather selectedCity={selectedCity}></CurrentWeather>
     </div>
   );
 }

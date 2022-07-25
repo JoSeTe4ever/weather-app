@@ -28,7 +28,6 @@ export const Search = ({ onSearchChange }) => {
   };
 
   const handleOnChange = (searchData) => {
-    debugger;
     setSearch(searchData);
     onSearchChange(searchData);
   };

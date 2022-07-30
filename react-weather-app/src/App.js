@@ -1,6 +1,7 @@
 import "./App.css";
 import CurrentWeather from "./components/current-weather/currentWeather";
 import Search from "./components/search/search";
+import Forecast from "./components/forecast/forecast"
 import {
   OPEN_WEATHER_API_KEY,
   OPEN_WEARTHER_API_URL,
@@ -35,6 +36,7 @@ function App() {
     <div className="container">
       <Search onSearchChange={handleOnSearchChange}></Search>
       <CurrentWeather selectedLocation={selectedLocationWeather}></CurrentWeather>
+      {selectedForecast && <Forecast selectedForecast={selectedForecast}></Forecast>}
     </div>
   );
 }
